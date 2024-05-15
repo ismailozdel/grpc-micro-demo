@@ -1,0 +1,41 @@
+
+services:
+  gateway:
+    image: gateway-test
+    ports:
+      - "5000:5000"
+    environment:
+      - INVOICE_HOST=invoice-c:5030
+      - STOCK_HOST=stock-c:5020
+      - USER_HOST=user-c:5010
+    depends_on:
+      - invoice
+      - stock
+      - user
+
+  invoice:
+    container_name: invoice-c
+    image: invoice-test
+    ports:
+      - "5030:5030"
+    environment:
+      - STOCK_HOST=stock-c:5020
+      - USER_HOST=user-c:5010
+    depends_on:
+      - user
+      - stock
+
+  stock:
+    container_name: stock-c
+    image: stock-test
+    ports:
+      - "5020:5020"
+
+  
+  user:
+    container_name: user-c
+    image: user-test
+    ports:
+      - "5010:5010"
+
+    

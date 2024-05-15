@@ -1,0 +1,149 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "micro",
+    "collectionId": "ff3bfb18-b16d-494f-841b-7e9ed19839cd",
+    "dateExported": "2024-05-15T09:08:00.674Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "78bb3847-7eb6-463f-ac83-9926387196cc",
+            "name": "user",
+            "containerId": "",
+            "created": "2024-05-14T13:59:14.198Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "0276567a-85f1-4910-8137-0c6494c96aa8",
+            "name": "stock",
+            "containerId": "",
+            "created": "2024-05-14T14:23:18.286Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "594cd29c-1a7e-4e85-b4d2-1212845aef80",
+            "name": "invoice",
+            "containerId": "",
+            "created": "2024-05-14T14:25:27.068Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "cd943cb8-0ea3-4a62-94d0-ea9108972a78",
+            "colId": "ff3bfb18-b16d-494f-841b-7e9ed19839cd",
+            "containerId": "78bb3847-7eb6-463f-ac83-9926387196cc",
+            "name": "get by id",
+            "url": "localhost:5000/api/user/2",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-05-14T13:59:14.198Z",
+            "modified": "2024-05-14T14:11:26.749Z",
+            "headers": []
+        },
+        {
+            "_id": "68844da8-55de-4e89-925b-53c0c7521d87",
+            "colId": "ff3bfb18-b16d-494f-841b-7e9ed19839cd",
+            "containerId": "78bb3847-7eb6-463f-ac83-9926387196cc",
+            "name": "create",
+            "url": "localhost:5000/api/user/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-05-14T13:59:14.199Z",
+            "modified": "2024-05-14T14:11:11.313Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"name\": \"iso Doe\",\n      \"email\": \"iso\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "88315853-e1f0-4878-837f-81c6dff40180",
+            "colId": "ff3bfb18-b16d-494f-841b-7e9ed19839cd",
+            "containerId": "78bb3847-7eb6-463f-ac83-9926387196cc",
+            "name": "delete",
+            "url": "localhost:5000/api/user/2",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-05-14T13:59:14.200Z",
+            "modified": "2024-05-14T14:11:20.258Z",
+            "headers": []
+        },
+        {
+            "_id": "ffcc805e-bbf7-4f44-8043-b879844a117d",
+            "colId": "ff3bfb18-b16d-494f-841b-7e9ed19839cd",
+            "containerId": "78bb3847-7eb6-463f-ac83-9926387196cc",
+            "name": "update",
+            "url": "localhost:5000/api/user",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-05-14T14:11:36.441Z",
+            "modified": "2024-05-14T14:12:05.048Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"id\": \"2\",\n      \"name\": \"isoooo Doe\",\n      \"email\": \"iso\"\n    }",
+                "form": []
+            }
+        },
+        {
+            "_id": "c5930fa2-5598-4d95-892f-cbf00db306b0",
+            "colId": "ff3bfb18-b16d-494f-841b-7e9ed19839cd",
+            "containerId": "0276567a-85f1-4910-8137-0c6494c96aa8",
+            "name": "getall",
+            "url": "localhost:5000/api/stock",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-05-14T14:23:25.050Z",
+            "modified": "2024-05-14T14:24:14.246Z",
+            "headers": []
+        },
+        {
+            "_id": "4396296a-9e86-4b84-ab05-c7620a6bdc97",
+            "colId": "ff3bfb18-b16d-494f-841b-7e9ed19839cd",
+            "containerId": "0276567a-85f1-4910-8137-0c6494c96aa8",
+            "name": "create",
+            "url": "localhost:5000/api/stock",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-05-14T14:24:40.149Z",
+            "modified": "2024-05-14T14:25:14.653Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"symbol\": \"ISOO\",\n      \"name\": \"test\",\n      \"price\": 1030\n    }",
+                "form": []
+            }
+        },
+        {
+            "_id": "eebfbf0d-eecb-44ff-a214-447005a2a9d5",
+            "colId": "ff3bfb18-b16d-494f-841b-7e9ed19839cd",
+            "containerId": "594cd29c-1a7e-4e85-b4d2-1212845aef80",
+            "name": "getall",
+            "url": "localhost:5000/api/invoice",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-05-14T14:25:35.531Z",
+            "modified": "2024-05-14T14:25:44.892Z",
+            "headers": []
+        },
+        {
+            "_id": "c128bda7-e311-4053-8389-2b058d087b0a",
+            "colId": "ff3bfb18-b16d-494f-841b-7e9ed19839cd",
+            "containerId": "594cd29c-1a7e-4e85-b4d2-1212845aef80",
+            "name": "create",
+            "url": "localhost:5000/api/invoice",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-05-15T08:50:17.337Z",
+            "modified": "2024-05-15T08:51:08.470Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \n        \"name\": \"test iso\",\n        \"description\": \"test ediyorum fatura\",\n        \"amount\": 1002,\n        \"stock_id\": \"2\",\n        \"user_id\": \"1\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "xr8Dv-WbiWSVr-KTu-_bEiWxG82JGVYEtf60TX2BMFvECtQ-tA47oHY9F7NdWWPgJr5NpZmgzS-_JrqMhDWj7g"
+}

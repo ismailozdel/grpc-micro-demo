@@ -1,0 +1,58 @@
+syntax="proto3";
+
+import "proto/stock/stock.proto";
+import "proto/user/user.proto";
+option go_package = "github.com/ismailozdel/micro/common/proto/invoice";
+
+package proto;
+
+
+
+service InvoiceService {
+    rpc CreateInvoice(CreateInvoiceRequest) returns (CreateInvoiceResponse);
+    rpc GetInvoice(GetInvoiceRequest) returns (GetInvoiceResponse);
+    rpc ListInvoices(ListInvoicesRequest) returns (ListInvoicesResponse);
+}
+
+message Invoice {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+    double amount = 4;
+    string stock_id = 5;
+    string user_id = 6;
+}
+message InvoiceWithStockAndUser {
+    Invoice invoice = 1;
+    Stock stock = 2;
+    User user = 3;
+}
+
+message CreateInvoiceRequest {
+    string name = 1;
+    string description = 2;
+    double amount = 3;
+    string stock_id = 4;
+    string user_id = 6;
+}
+
+message CreateInvoiceResponse {
+    repeated Invoice invoice = 1;
+}
+
+message GetInvoiceRequest {
+    string id = 1;
+}
+
+message GetInvoiceResponse {
+    repeated InvoiceWithStockAndUser invoice = 1;
+
+}
+
+message ListInvoicesRequest {
+}
+
+message ListInvoicesResponse {
+    repeated InvoiceWithStockAndUser invoices = 1;
+}
+
